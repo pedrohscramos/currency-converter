@@ -1,0 +1,21 @@
+@import "../../../../styles.scss";
+
+@function rem-calc($size) {
+  $value: $size / 16;
+  @return #{$value}rem;
+}
+
+:host {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--header-background);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+
+    padding: rem-calc(20) 0;
+  }
+}

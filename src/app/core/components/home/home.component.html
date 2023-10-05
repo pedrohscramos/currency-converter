@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="card" *ngFor="let currency of getCurrencies; let i = index">
+    <div class="card-header">{{ currency.nome }}</div>
+    <div *ngIf="isLoading(i)">
+      <div class="preloader"></div>
+    </div>
+    <div
+      class="card-content"
+      [ngStyle]="{
+        color:
+          currency.valorAtual <= 1
+            ? 'red'
+            : currency.valorAtual > 1 && currency.valorAtual <= 5
+            ? 'green'
+            : 'blue'
+      }"
+    >
+      {{
+        currency.valorAtual | currency : "BRL" : "symbol" : "1.2-2" : "pt-BR"
+      }}
+    </div>
+    <hr class="divider" />
+    <div class="card-footer">
+      <div class="column">
+        <div class="row"><span class="title">Variação (%)</span></div>
+        <div class="row">
+          <span class="info">{{ currency.variacao }}</span>
+        </div>
+      </div>
+      <hr class="vertical-divider" />
+      <div class="column">
+        <div class="row"><span class="title">Atualizado</span></div>
+        <div class="row">
+          <span class="info">{{ currency.horaAtualizacao }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

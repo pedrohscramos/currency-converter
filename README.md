@@ -1,27 +1,24 @@
 # CurrencyConverter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+## Instalação
 
-## Development server
+1. Faça o clone dos arquivos neste repositório.
+2. Acesse a pasta clonada no seu terminal
+3. Execute `ng serve`. Navigate to `http://localhost:4200/`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instalação (Docker)
 
-## Code scaffolding
+1. Faça o clone dos arquivos neste repositório.
+2. Instale o [Docker](https://docs.docker.com/install/) e o [Docker Compose](https://docs.docker.com/compose/install/).
+3. Entre na pasta do projeto no seu terminal e rode o comando docker-compose up -d
+4. Acesse a URL <http://localhost:4200/> no navegador e inicie a instalação.
+5. Para Conseguir fazer alterações siga instruções a seguir
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Alterações (Docker)
 
-## Build
+1. Com o container funcionando volte ao terminal e execute o comando `docker container ps` para saber o id do container
+2. Com o id do container em mãos execute `docker exec -t -i 112233445566 /bin/bash` onde o número `112233445566` você deve trocar para o id encontrado no passo anterior
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Rodando Testes
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Execute `ng test` na pasta clonada no seu terminal.
