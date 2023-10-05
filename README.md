@@ -4,7 +4,7 @@
 
 1. Faça o clone dos arquivos neste repositório.
 2. Acesse a pasta clonada no seu terminal
-3. Execute `ng serve`. Navigate to `http://localhost:4200/`.
+3. Execute `ng serve`. Acesse o navegador no endereço `http://localhost:4200/`.
 
 ## Instalação (Docker)
 
